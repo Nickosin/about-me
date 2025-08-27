@@ -126,7 +126,7 @@ function App() {
                           <hr />
                           </div>
                           <br />
-                          <div className='researchContent'>
+                          <div className='researchContentt'>
                             <div className='int'><span className= 'head'>Applying AI to Veterinary Medicine:</span>
 <span className='intbody'>Given your background in both veterinary medicine and AI,
  you could explore how advancements in artificial intelligence 

@@ -417,3 +417,87 @@ gap: 0.6rem;
   padding: 6px;
   border-radius: 60%;
 }
+
+@media screen and (max-width: 400px){
+  .container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+  }
+
+  .iconcontact{
+    display: none;
+  }
+
+  .me{
+    padding-top: 6vh;
+  }
+
+  .about{
+   width: 39vh;
+  }
+  .name{
+    font-size: 2vh;
+  }
+  .connect{
+    font-size: 2vh;
+    font-weight: bold;
+  }
+  .btn{
+    width: 39vh;
+  }
+
+  .researchHeader{
+    text-align: center;
+  }
+  .researchContent{
+    width: 40vh;
+  }
+  .researchContentt{
+    text-align: center;
+  }
+  .intbody{
+    
+    text-align: justify;
+  }
+  .educationHeader{
+    text-align: center;
+  }
+  .projectHeader{
+    text-align: center;
+  }
+  .project{
+    width: 39vh;
+  }
+  .projectName{
+    width: 39vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 4vh;
+  }
+  .header{
+    text-align: center;
+  }
+  .stacks{
+    width: 39vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 4vh;
+  }
+
+}
+
+@media screen and (max-width: 800px){
+  .container{
+    width: 100%;
+  }
+
+  .iconcontact{
+    display: none;
+  }
+}
