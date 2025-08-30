@@ -587,6 +587,10 @@ gap: 0.6rem;
   .skillscontent{
     width: 80%;
   }
+
+    .copy{
+    font-size: 0.8rem;
+  }
 }
 
 @media screen and (min-width: 401px) and (max-width: 680px){
