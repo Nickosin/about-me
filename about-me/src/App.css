@@ -419,10 +419,49 @@ gap: 0.6rem;
   border-radius: 60%;
 }
 
+.sidenav{
+  width: 15rem;
+  height: 50rem;
+  background-color: #ccd0cf44;
+  backdrop-filter: blur(10px);
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+  display: none;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-top: 2rem;
+  padding-left: 1rem;
+  gap: 1.5rem;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 999;
+}
+.lear{
+  display: none;
+}
+
 @media screen and (max-width: 400px){
   .container{
     width: 100%;
     height: auto;
+  }
+
+  .l{
+    font-size: 1.3rem;
+    font-weight: bold;
+    width: 100%;
+    padding: 15px;
+  }
+  .l:hover{
+    border: 1px solid var(--secondary-color);
+  }
+
+  .clear{
+    display: none;
+  }
+  .lear{
+    display: block;
   }
 
   .iconcontact{
@@ -497,7 +536,7 @@ gap: 0.6rem;
 
 }
 
-@media screen and (max-width: 800px){
+@media screen and (min-width: 401px) and (max-width: 1040px){
   .container{
     width: 100%;
   }
@@ -505,4 +544,62 @@ gap: 0.6rem;
   .iconcontact{
     display: none;
   }
+
+  .l{
+    font-size: 1.45rem;
+    font-weight: bold;
+    width: 100%;
+    padding: 15px;
+  }
+  .l:hover{
+    border: 1px solid var(--secondary-color);
+    width: 100%;
+  }
+
+  .clear{
+    display: none;
+  }
+  .lear{
+    display: block;
+  }
+
+  .research{
+    width: 100%;
+  }
+  .researchContent{
+    width: 80%;
+  }
+  .education{
+    width: 100%;
+  }
+  .educationContent{
+    width: 80%;
+  }
+  .projects{
+    width: 100%;
+  }
+  .projectsContent{
+    width: 80%;
+  }
+  .skills{
+    width: 100%;
+  }
+  .skillscontent{
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 401px) and (max-width: 580px){
+.about{
+  width: 28rem;
+}
+.name{
+  font-size: 1.5rem;
+}
+.connect{
+  font-size: 1.5rem;
+}
+.btn{
+  width: 28rem;
+}
 }

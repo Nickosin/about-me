@@ -1,6 +1,7 @@
 import logo from './logo.jpeg';
 import './App.css';
 import './global.css';
+import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 
@@ -15,9 +16,22 @@ library.add(fas, far, fab);
 
 function App() {
 
-  const scrollToSection = (sectionId, e) => {
-    e.preventDefault();
-    document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+  const [isNavOpen, setIsNavOpen] = useState(false);
+
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const toggleSidebar = () => {
+    setIsNavOpen(!isNavOpen);
+  };
+
+  const handleLinkClick = (sectionId) => {
+    setIsNavOpen(false);
+    scrollToSection(sectionId);
   };
 
   return (
@@ -29,11 +43,32 @@ function App() {
                 <h2>Evans</h2>
                 </div>
                 <div className = "nav">
-                    <span><a className = 'link' href = "#" onClick={(e) => scrollToSection('me', e)}>Me</a></span>
-                    <span><a className = 'link' href = "#" onClick={(e) => scrollToSection('research', e)}>Research</a></span>
-                    <span><a className = 'link' href = "#" onClick={(e) => scrollToSection('project', e)}>Projects</a></span>
-                    <span><a className = 'link' href = "#" onClick={(e) => scrollToSection('skills', e)}>Skills</a></span>
-                    <span><a className = 'link' href = "#">My Résumé</a></span>
+                    <span className ='clear'><a className = 'link'  onClick={() => handleLinkClick('me')}>Me</a></span>
+                    <span className ='clear'><a className = 'link'  onClick={() => handleLinkClick('research')}>Research</a></span>
+                    <span className ='clear'><a className = 'link'  onClick={() => handleLinkClick('project')}>Projects</a></span>
+                    <span className ='clear'><a className = 'link' onClick={() => handleLinkClick('skills')}>Skills</a></span>
+                    <span className ='clear'><a className = 'link' >My Résumé</a></span>
+                     <span className ='lear' onClick={toggleSidebar}>
+            {isNavOpen ? (
+              <FontAwesomeIcon icon= 'fa-solid fa-xmark' />
+            ) : (
+              <FontAwesomeIcon icon= 'fa-solid fa-bars' />
+            )}
+          </span>
+        </div>
+        <div className="sidenav" style={{ display: isNavOpen ? 'flex' : 'none' }}>
+          <span onClick={toggleSidebar}>
+            {isNavOpen ? (
+              <FontAwesomeIcon icon= 'fa-solid fa-xmark' />
+            ) : (
+              <FontAwesomeIcon icon= 'fa-solid fa-bars' />
+            )}
+          </span>
+                    <span><a className="l" onClick={() => handleLinkClick('me')}>Me</a></span>
+          <span><a className="l"  onClick={() => handleLinkClick('research')}>Research</a></span>
+          <span><a className="l"  onClick={() => handleLinkClick('project')}>Projects</a></span>
+          <span><a className="l"  onClick={() => handleLinkClick('skills')}>Skills</a></span>
+          <span><a className="l"  onClick={() => handleLinkClick('skills')}>My Résumé</a></span>
                     </div>
             </div>
             
@@ -100,7 +135,7 @@ function App() {
                         <span>
                           <a
                           className='iconlogo'
-                          href=''
+                          href='https://x.com/UmezinwaE01?t=DyrrcHgmab1AJe_3qLXjWg&s=09'
                           target= "_blank"
                           rel = 'noopener' noreferrer>
                             <FontAwesomeIcon icon= 'fa-brands fa-square-twitter' />
@@ -110,7 +145,7 @@ function App() {
                         <span>
                           <a
                           className='iconlogo'
-                          href='umezinwaevans@gmail.com'
+                          href='mailto:umezinwaevans@gmail.com'
                           target= "_blank"
                           rel = 'noopener' noreferrer>
                             <FontAwesomeIcon icon= 'fa-regular fa-envelope' />
@@ -128,29 +163,17 @@ function App() {
                           <br />
                           <div className='researchContentt'>
                             <div className='int'><span className= 'head'>Applying AI to Veterinary Medicine:</span>
-<span className='intbody'>Given your background in both veterinary medicine and AI,
- you could explore how advancements in artificial intelligence 
- can be leveraged to enhance veterinary care and animal well-being.
-  This could include using AI-powered diagnostic tools, automated monitoring systems, 
-  or personalized treatment recommendations.</span></div><br /><br />
+<span className='intbody'>As a veterinary student, I'm fascinated by the potential of AI to revolutionize animal care and welfare. I believe AI can be leveraged to enhance diagnostic accuracy, streamline clinical workflows, and provide more personalized care for patients. For instance, AI-powered algorithms can analyze medical images, lab results, and other data to identify potential health issues earlier and more accurately. This can be particularly useful in detecting diseases such as cancer, where early detection is crucial for effective treatment. Additionally, AI can help personalize treatment plans by analyzing individual animal characteristics, medical history, and environmental factors. By integrating AI with veterinary medicine, we can improve patient outcomes, reduce costs, and enhance the overall quality of care.</span></div><br /><br />
 
 
                   <div className='int'><span className= 'head'>Integrating Hardware and AI Systems:</span>
 
-<span className='intbody'>As a skilled hardware engineer and someone passionate about AI, 
-you could investigate ways to integrate hardware and AI technologies to create
- innovative, intelligent systems. This could involve developing IoT (Internet of Things)
-  devices, robotics, or embedded systems that utilize AI algorithms for enhanced 
-  functionality and decision-making.</span></div><br /><br />
+<span className='intbody'> As a student of veterinary medicine, I've realized that medical devices and equipment often lack the ability to collect, analyze, and respond to real-time data. This is where AI comes in – by integrating AI with hardware systems, we can create more sophisticated, responsive, and effective medical tools. For example, AI-powered devices can collect data on animal vital signs, monitor environmental factors, and provide real-time feedback to veterinarians. This can be particularly useful in emergency situations, where every second counts. Additionally, AI can enable robots to perform tasks such as surgery, patient monitoring, and sample collection, reducing the risk of human error and improving patient outcomes. By integrating AI with hardware, we can create more efficient, effective, and compassionate medical care.</span></div><br /><br />
 
 
                   <div className='int'><span className = 'head'>Exploring the Intersection of AI and Web Development:</span>
 
-<span className='intbody'>Combining your expertise in full-stack web development and your interest in AI, 
-you could explore how AI can be leveraged to enhance the user experience, 
-improve web application performance, or automate certain web development tasks. 
-This could include using AI for personalized content recommendations, automated testing, 
-or intelligent content generation.</span></div>
+<span className='intbody'>As a student of veterinary medicine, I've also developed an interest in web development and the potential applications of AI in this field. I believe AI can be used to create innovative solutions for veterinary education, communication, and collaboration. For instance, AI-powered veterinary portals can provide personalized, user-friendly access to medical records, track patient progress, and receive real-time updates. This can be particularly useful for veterinarians and pet owners who need to stay up-to-date with the latest medical information and treatment options. Additionally, AI can help create interactive, immersive learning environments for veterinary students, providing personalized feedback and assessment tools. By combining AI with web development, we can create more effective, efficient, and compassionate veterinary care.</span></div>
                             </div>
                       </div>
                       </div>
@@ -172,7 +195,7 @@ or intelligent content generation.</span></div>
                               <div className = 'schlink'>
                                 <a
                                 className = 'linksch'
-                                href = ''
+                                href = 'https://www.knust.edu.gh'
                                 target = '_black'
                                 rel = 'noopener noreferrer'>
                                   <FontAwesomeIcon icon= 'fa-solid fa-link' />
@@ -446,7 +469,7 @@ or intelligent content generation.</span></div>
                         <span>
                           <a
                           className='logolink'
-                          href=''
+                          href='https://x.com/UmezinwaE01?t=DyrrcHgmab1AJe_3qLXjWg&s=09'
                           target= "_blank"
                           rel = 'noopener' noreferrer>
                             <FontAwesomeIcon className='ilogo' icon= 'fa-brands fa-square-twitter' />
@@ -456,7 +479,7 @@ or intelligent content generation.</span></div>
                         <span>
                           <a
                           className='logolink'
-                          href='umezinwaevans@gmail.com'
+                          href='mailto:umezinwaevans@gmail.com'
                           target= "_blank"
                           rel = 'noopener' noreferrer>
                             <FontAwesomeIcon className='ilogo' icon= 'fa-regular fa-envelope' />
@@ -464,7 +487,7 @@ or intelligent content generation.</span></div>
                         </span>
                           </div>
                           <div className='copyright'>
-                            <p className='copy'>Copyright @ 2025 UMEZINWA EVANS CHUKWUEBUKA</p>
+                            <p className='copy'>Copyright © 2025 UMEZINWA EVANS CHUKWUEBUKA</p>
                           </div>
                         </div>
 
