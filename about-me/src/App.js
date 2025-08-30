@@ -68,7 +68,7 @@ function App() {
           <span><a className="l"  onClick={() => handleLinkClick('research')}>Research</a></span>
           <span><a className="l"  onClick={() => handleLinkClick('project')}>Projects</a></span>
           <span><a className="l"  onClick={() => handleLinkClick('skills')}>Skills</a></span>
-          <span><a className="l"  onClick={() => handleLinkClick('skills')}>My Résumé</a></span>
+          <span><a className="l"  onClick={() => handleLinkClick('')}>My Résumé</a></span>
                     </div>
             </div>
             
