@@ -481,7 +481,7 @@ function App() {
                           className='logolink'
                           href='mailto:umezinwaevans@gmail.com'
                           target= "_blank"
-                          rel = 'noopener' noreferrer>
+                          rel = 'noopener noreferrer'>
                             <FontAwesomeIcon className='ilogo' icon= 'fa-regular fa-envelope' />
                             </a>
                         </span>
