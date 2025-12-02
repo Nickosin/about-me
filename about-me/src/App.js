@@ -281,6 +281,33 @@ function App() {
                                   <span>
                                     <a
                                 className = 'linksch'
+                                href = 'https://chatapp-frontend-phi-ten.vercel.app'
+                                target = '_black'
+                                rel = 'noopener noreferrer'>
+                                  <FontAwesomeIcon icon= 'fa-solid fa-link' />
+                                  </a>
+                                  </span>
+                                </div>
+                                <div className='brandname'>
+                                  <h3>Chatapp</h3>
+                                </div>
+                                <div className='aboutbrand'>
+                                  Add and text friend, get same experience as whatapp
+                                  but in a different app.
+                                </div>
+                                <div className='softwareused'>
+                                  <span><FontAwesomeIcon icon= 'fa-brands fa-react' /></span>
+                                  <span><FontAwesomeIcon icon= 'fa-brands fa-node' /></span>
+                                  <span><FontAwesomeIcon icon= 'fa-solid fa-feather' /></span>
+                                </div>
+                              </div>
+
+                              <div className='chocolateGlow'>
+                                <div className='brandlogo'>
+                                  <span><FontAwesomeIcon icon= 'fa-solid fa-basketball' /></span> 
+                                  <span>
+                                    <a
+                                className = 'linksch'
                                 href = ''
                                 target = '_black'
                                 rel = 'noopener noreferrer'>
@@ -289,7 +316,7 @@ function App() {
                                   </span>
                                 </div>
                                 <div className='brandname'>
-                                  <h3>Chocolate Glow</h3>
+                                  <h3>Placeholder</h3>
                                 </div>
                                 <div className='aboutbrand'>
                                   A makeup website where you can get in touch 
@@ -316,34 +343,7 @@ function App() {
                                   </span>
                                 </div>
                                 <div className='brandname'>
-                                  <h3>Chocolate Glow</h3>
-                                </div>
-                                <div className='aboutbrand'>
-                                  A makeup website where you can get in touch 
-                                  with the makeup artist and book a section
-                                </div>
-                                <div className='softwareused'>
-                                  <span><FontAwesomeIcon icon= 'fa-brands fa-react' /></span>
-                                  <span><FontAwesomeIcon icon= 'fa-brands fa-node' /></span>
-                                  <span><FontAwesomeIcon icon= 'fa-solid fa-feather' /></span>
-                                </div>
-                              </div>
-
-                              <div className='chocolateGlow'>
-                                <div className='brandlogo'>
-                                  <span><FontAwesomeIcon icon= 'fa-solid fa-basketball' /></span> 
-                                  <span>
-                                    <a
-                                className = 'linksch'
-                                href = ''
-                                target = '_black'
-                                rel = 'noopener noreferrer'>
-                                  <FontAwesomeIcon icon= 'fa-solid fa-link' />
-                                  </a>
-                                  </span>
-                                </div>
-                                <div className='brandname'>
-                                  <h3>Chocolate Glow</h3>
+                                  <h3>Placeholder</h3>
                                 </div>
                                 <div className='aboutbrand'>
                                   A makeup website where you can get in touch 
