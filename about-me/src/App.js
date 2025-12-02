@@ -254,7 +254,7 @@ function App() {
                                   <span>
                                     <a
                                 className = 'linksch'
-                                href = ''
+                                href = 'https://chocolait-glow.vercel.app'
                                 target = '_black'
                                 rel = 'noopener noreferrer'>
                                   <FontAwesomeIcon icon= 'fa-solid fa-link' />
@@ -262,7 +262,7 @@ function App() {
                                   </span>
                                 </div>
                                 <div className='brandname'>
-                                  <h3>Chocolate Glow</h3>
+                                  <h3>Chocolait Glow</h3>
                                 </div>
                                 <div className='aboutbrand'>
                                   A makeup website where you can get in touch 
